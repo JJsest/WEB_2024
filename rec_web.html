@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+</head>
+<body>
+    <div class="nome-aluno">
+        <h1>Juliana Sestari</h1>
+    </div>
+    <main>
+        <section class="login">
+            <div class="imagem"></div>
+            <div class="imagem_2"></div>
+                <!-- Aqui vai a imagem nas CSS -->
+            <div class="formulario">
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                        <i class="material-icons">person</i>
+                        <input type="nome" name="login" id="ilogin" placeholder="nome" autocomplete="name" required maxlength="100">
+                        <label for="ilogin">Login</label>
+                    </div>
+                    <div class="campo">
+                        <i class="material-icons">vpn_key</i>
+                        <input type="email" name="email" id="iemail" placeholder="email" autocomplete="email" maxlength="30">
+                        <label for="isenha">Senha</label>
+                    </div>
+                    <div class="campo">
+                        <i class="material-icons">phone</i>
+                        <input type="phone" name="telefone" id="ifone" placeholder="telefone" maxlength="11">
+                        <label for="isenha">Senha</label>
+                    </div>
+                    <input type="submit" value="Enviar">
+                    <a href="esqueci.html" class="botao">
+                        Cancelar <i class="material-icons"></i>
+                    </a>
+                </form>
+                <div class="icons">
+                    <div class="facebook">
+                        <i data-feather="facebook"></i>
+                    </div>
+                    <div class="twitter">
+                        <i data-feather="twitter"></i>
+                    </div>
+                    <div class="instagram">
+                        <i data-feather="instagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                 <p>&copy; IFPR Campus Cascavel</p>
+                </div>
+
+        </section>
+    </main>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

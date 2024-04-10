@@ -1,125 +1,175 @@
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    margin: 0;
-    font-family: 'Noto Sans', sans-serif;
-}
-
-body * {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
 }
 
-.main-login {
-    width: 100vw;
+body, html {
+    background-color: pink;
     height: 100vh;
-    background: #b284e7;
+    width: 100vw;
+}
+
+.nome-aluno {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-.login {
-    width: 50vw;
-    height: 50vh;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    color: white;
+    margin: 10px 0px;
 }
 
-.card-login {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px 20px;
-    background: #f9f8fc;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056;
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
-.card-login h1 {
-    color: #000000;
-    font-weight: 100;
-    margin: 0;
+section.login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+
+    background-color: palevioletred;
+    width: 250px;
+    height: 515px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(99, 95, 95, 0.055);
+
+    transform: translate(-50%, -50%);
+    transition: width .3s, height .3s;
+    transition-timing-function: ease;
 }
 
-.card-login p {
-    color: #000000;
-    font-weight: 100;
-    margin: 0%;
+section.login > div.imagem {
+    display: block;
+    background: pink url(https://todateen.com.br/wp-content/uploads/2016/10/chuck-bass-blair-waldorf.jpg) no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    height: 200px;
+}
+section.login > div.imagem_2 {
+    display: block;
+    background: pink url(https://todateen.com.br/wp-content/uploads/2016/10/chuck-bass-blair-waldorf.jpg) no-repeat;
+    background-size: cover;
+    background-position: right bottom;
+    height: 200px;
 }
 
-.textfield {
-    width: 100%; 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    margin: 1px 0px; 
+section.login > div.formulario {
+    display: block;
+    padding: 10px;
+    background-size: cover;
+    background-position: center;
 }
 
-.textfield input {
-    width: 100%;
-    border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background:  #62d0f1;
-    color: #1d1f1fde;
-    font-size: 12pt;
-    box-shadow: 0px 10px 40px #c6cbcc56;
-    outline: none;
-    box-sizing: border-box;
-}
-
-.textfield label {
-    color: #1b1f1fde;
+div.formulario > h1 {
+    text-align: center;
     margin-bottom: 10px;
 }
-    
-.textfield input::placeholder {
-    color: #07070794;
+
+div.formulario > p {
+    font-size: 0.8em;
 }
 
-.btn-login {
+form > div.campo {
+    background-color: pink;
+    border: 2px solid pink;
+    display: block;
     width: 100%;
-    padding: 16px 0px;
-    margin: 20px;
-    border: none;
+    height: 40px;
     border-radius: 8px;
-    outline: none;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: #f7f9fc;
-    background: #62d0f1;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #eef7f352;
+    margin: 5px 0px;
 }
-.btn {
-    width: 100%;
-    padding: 16px 0px;
-    margin: 1px;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    font-weight: 800;
-    letter-spacing: 3px;
-    color: #62d0f1;
-    background: #b8e7e4;
-    cursor: pointer;
-    box-shadow: 0px 10px 40px -12px #07552be3;
 
+div.campo > label {
+    display: none;
 }
+
+div.campo > i {
+    color: palevioletred;
+    /*background-color: black;*/
+    font-size: 1.9em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: rgb(226, 135, 165);
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px);
+}
+
+div.campo > input:focus-within {
+    background-color: pink;
+    border: none;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: pink;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: palevioletred;
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: palevioletred;
+    border: 1px solid palevioletred;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+form > a.botao:hover {
+    background-color: pink;
+}
+
+form > a.botao > i {
+    font-size: 0.8em;
+}
+
 .icons {
-    padding: 20px;
-    text-align: center;
-}
-.icons svg {
-    text-align: center;
-    color: black;
-
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 10px 0px;
 }
 
+.facebook {
+    color: pink;
+}
+
+.twitter {
+    color: pink;
+}
+.instagram {
+    color: pink;
+}
+.copy {
+    text-align: center;
+    color: pink;
+}
 
